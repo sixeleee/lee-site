@@ -295,11 +295,11 @@ function renderServices() {
 
 category.products.forEach(product => {
     const currentPrice = getCurrentPrice(product.id, product.tagPrice);
-    
+            
     html += `
         <div class="product-card" data-product-id="${product.id}">
             <div class="product-image-container">
-                <img src="${imageUrl}" alt="${product.name}" class="product-image" loading="lazy">
+                <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy">
 
                     </div>
                     <div class="product-info">
@@ -432,3 +432,4 @@ document.addEventListener('click', function(event) {
     }
 
 });
+
