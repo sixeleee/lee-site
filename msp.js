@@ -295,12 +295,7 @@ function renderServices() {
 
 category.products.forEach(product => {
     const currentPrice = getCurrentPrice(product.id, product.tagPrice);
-
-    let imageUrl = product.image.trim();
-    if (!imageUrl.startsWith('http') && !imageUrl.startsWith('images/')) {
-        imageUrl = 'images/' + imageUrl;
-    }
-
+    
     html += `
         <div class="product-card" data-product-id="${product.id}">
             <div class="product-image-container">
@@ -435,4 +430,5 @@ document.addEventListener('click', function(event) {
         !toggle.contains(event.target)) {
         closeMobileMenu();
     }
+
 });
